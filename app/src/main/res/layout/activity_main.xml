@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity"
+   >
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+
+        <include layout="@layout/shimmer_effect"></include>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:elevation="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottommenu" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/recycler_main_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
